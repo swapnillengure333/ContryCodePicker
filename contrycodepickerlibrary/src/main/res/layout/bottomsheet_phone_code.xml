@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <LinearLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <View
+            android:layout_width="70dp"
+            android:layout_height="5dp"
+            android:background="#44000000"/>
+        <TextView
+            android:layout_marginTop="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Country Code"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_query_holder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_28"
+        android:layout_below="@+id/rl_title">
+        <EditText
+            android:id="@+id/editText_search"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/img_clear_query"
+            android:layout_toStartOf="@+id/img_clear_query"
+            android:hint="Find Country Code"
+            android:imeOptions="actionSearch"
+            android:background="#00FFFFFF"
+            android:singleLine="true"
+            android:textSize="12dp"
+            android:inputType="textNoSuggestions"
+            android:textColor="@android:color/primary_text_light_nodisable" />
+
+        <ImageView
+            android:id="@+id/img_clear_query"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.7"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_countryDialog"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/rl_query_holder"
+        android:dividerHeight="2dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_query_holder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="No Result Found"
+        android:textColor="@android:color/primary_text_light"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/loc_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/gradient_button"
+        android:drawablePadding="10dp"
+        android:text="Submit"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:gravity="center" />
+</LinearLayout>

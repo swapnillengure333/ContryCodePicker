@@ -1,0 +1,3 @@
+include ':contrycodepickerlibrary'
+include ':app'
+rootProject.name = "ContryCodePicker"
