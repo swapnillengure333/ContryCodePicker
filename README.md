@@ -27,7 +27,7 @@ allprojects {
   
   ```gradle
   dependencies {
-	        implementation 'com.github.swapnillengure333:ContryCodePicker:Tag'
+	        implementation 'com.github.swapnillengure333:ContryCodePicker:1.0'
 	}
   ```
   
